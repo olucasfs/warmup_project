@@ -1,26 +1,33 @@
 {
-  "name": "startup_project",
+  "name": "warmup_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run clean",
+    "start": "cypress run",
+    "prereport": "mochawesome-merge cypress/reporter/mochawesome-report/*.json > cypress/reporter/output.json",
+    "report": "marge --reportDir cypress/reporter/output.json --reportDir ./ --inline",
+    "clean": "rm -rf cypress/reporter/mochawesome-report"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olucasfs/startup_project.git"
+    "url": "git+https://github.com/olucasfs/warmup_project.git"
   },
-  "author": "",
+  "author": "Lucas Fernandes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/olucasfs/startup_project/issues"
+    "url": "https://github.com/olucasfs/warmup_project/issues"
   },
-  "homepage": "https://github.com/olucasfs/startup_project#readme",
+  "homepage": "https://github.com/olucasfs/warmup_project#readme",
   "devDependencies": {
     "cypress": "^6.5.0"
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.2.0",
     "path": "^0.12.7"
   }
 }
