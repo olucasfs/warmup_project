@@ -3,3 +3,5 @@ xunit.xml
 cypress/fixtures
 cypress/videos
 cypress/screenshots
+reporter
+.DS_Store
