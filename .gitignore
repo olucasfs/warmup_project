@@ -1,0 +1,5 @@
+node_modules
+xunit.xml
+cypress/fixtures
+cypress/videos
+cypress/screenshots
