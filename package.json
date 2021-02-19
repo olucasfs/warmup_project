@@ -10,7 +10,7 @@
     "combine-reports": "mochawesome-merge cypress/reporter/mochawesome-report/*.json > cypress/reporter/output.json",
     "generate-report": "marge cypress/reporter/output.json -f report -o cypress/reporter/mochawesome-report",
     "posttest": "npm run combine-reports && npm run generate-report",
-    "test": "npm run scripts || npm run posttest"
+    "cypress": "npm run scripts || npm run posttest"
   },
   "repository": {
     "type": "git",
