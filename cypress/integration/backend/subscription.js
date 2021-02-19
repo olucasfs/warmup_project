@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Search Subscrition successfully', () => {
     it('Positive scenario', () => {
         cy.request('GET', 'subscription')

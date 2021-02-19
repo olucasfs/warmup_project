@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Quitanda Test', () => {
     it('Search Quitanda itens successfully', () => {
         cy.request({
