@@ -10,7 +10,7 @@
     "combine-reports": "mochawesome-merge cypress/reporter/mochawesome-report/*.json > cypress/reporter/output.json",
     "generate-report": "marge cypress/reporter/output.json -f report -o cypress/reporter/mochawesome-report",
     "posttest": "npm run combine-reports && npm run generate-report",
-    "cypress": "npm run scripts || npm run posttest"
+    "cypress": "npm run clean:reports && npm run scripts && npm run posttest"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,14 @@
   },
   "homepage": "https://github.com/olucasfs/warmup_project#readme",
   "devDependencies": {
-    "cypress": "^6.5.0"
+    "cypress": "^6.5.0",
+    "fs-extra": "^9.1.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.2.0",
+    "path": "^0.12.7"
   },
   "dependencies": {
+    "cypress": "^6.5.0",
     "fs-extra": "^9.1.0",
     "mochawesome": "^4.1.0",
     "mochawesome-merge": "^4.2.0",
