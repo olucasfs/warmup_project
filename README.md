@@ -1,7 +1,12 @@
-# Projeto para Warmup e Ideias
+# Projeto para Warmup e Ideias com Cypress
 
 ## Pre-Req
-Node.js
+[Docker](https://docs.docker.com/get-docker/)
 
 ## Running
-`ENV_NODE=prod npm run cypress`
+
+### Build Docker Image
+`docker build --no-cache -t cypress-image .`
+
+### Running Tests
+`docker run -it -v $PWD:/app --env NODE_ENV=prod cypress-image npm run cypress`
