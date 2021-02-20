@@ -7,11 +7,11 @@
     "clean:reports": "rm -R -f cypress/reporter && mkdir cypress/reporter",
     "setup": "npm install",
     "pretest": "npm run clean:reports",
-    "scripts": "cypress run --env configFile=$NODE_ENV",
+    "scripts": "npx cypress run --env configFile=$NODE_ENV",
     "combine-reports": "mochawesome-merge cypress/reporter/mochawesome-report/*.json > cypress/reporter/output.json",
     "generate-report": "marge cypress/reporter/output.json -f report -o cypress/reporter/mochawesome-report",
     "posttest": "npm run combine-reports && npm run generate-report",
-    "cypress": "npm run pretest && npm run setup && npm run scripts && npm run posttest"
+    "cypress": "npm run pretest && npm run scripts && npm run posttest"
   },
   "repository": {
     "type": "git",
