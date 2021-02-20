@@ -1,0 +1,8 @@
+.gitignore
+.DS_Store
+cypress/fixtures
+cypress/videos
+cypress/screenshots
+reporter
+npm-debug.log
+cypress/reporter
